@@ -1,6 +1,6 @@
 import pytest
 
-from shortener.models import ShortURL
+from shortener_api.models import ShortURL
 
 
 @pytest.mark.django_db

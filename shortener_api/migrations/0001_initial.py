@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 
-import shortener.models
+import shortener_api.models
 
 
 class Migration(migrations.Migration):
@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 (
                     "token",
                     models.CharField(
-                        default=shortener.models.generate_token,
+                        default=shortener_api.models.generate_token,
                         max_length=6,
                         unique=True,
                     ),
