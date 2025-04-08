@@ -170,3 +170,12 @@ LOGGING = {
         "level": "INFO",
     },
 }
+
+REST_FRAMEWORK = {
+    "DEFAULT_THROTTLE_CLASSES": [
+        "shortener_api.throttling.CreateShortURLThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "shorter": "5/min",
+    },
+}

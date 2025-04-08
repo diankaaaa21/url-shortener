@@ -5,6 +5,9 @@
 </head>
 <body>
     <h1>Создать короткую ссылку</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         <input type="url" name="original_url" placeholder="Вставьте ссылку" required>
