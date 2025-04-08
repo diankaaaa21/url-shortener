@@ -1,0 +1,11 @@
+django==5.2
+djangorestframework==3.16.0
+celery==5.5.1
+redis
+flower
+python-dotenv
+gunicorn
+psycopg2-binary
+pytest
+pytest-django
+pytest-mock

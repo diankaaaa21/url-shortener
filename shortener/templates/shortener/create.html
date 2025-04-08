@@ -1,0 +1,15 @@
+<!-- shortener/templates/shortener/create.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создание короткой ссылки</title>
+</head>
+<body>
+    <h1>Создать короткую ссылку</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="url" name="original_url" placeholder="Вставьте ссылку" required>
+        <button type="submit">Сократить</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- shortener/templates/shortener/stats.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Статистика переходов</title>
+</head>
+<body>
+    <h1>Статистика по сокращённым ссылкам</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Токен</th>
+                <th>Оригинальная ссылка</th>
+                <th>Переходы</th>
+                <th>Создана</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for url in urls %}
+                <tr>
+                    <td><a href="/{{ url.token }}">{{ url.token }}</a></td>
+                    <td>{{ url.original_url }}</td>
+                    <td>{{ url.click_count }}</td>
+                    <td>{{ url.created_at|date:"Y-m-d H:i" }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
